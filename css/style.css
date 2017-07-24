@@ -1,0 +1,81 @@
+* {
+    font-size 30px;
+}
+/*pseudo element bo nie ma ich w kodzie html content jest oblig. przy before after*/
+#kontener p::before {
+    content:'*';
+}
+
+#kontener p::after {
+    content: '*';
+}
+
+#kontener h1::first-letter {
+    color: red;
+}
+
+#kontener p::first-line {
+    color:red;
+}
+
+/*pseudoklasy linków*/
+#link a:link {
+    color:pink;   
+}
+
+#link a:visited {
+    color:gray;
+}
+
+#link a:hover {
+    color: yellow;
+}
+
+#link a:active {
+    color: red;
+}
+/*focus na input*/
+#formularz input:focus {
+    color: red;*
+}
+
+/*pseudoklasy target/ lang*/
+div:target {
+    border: 1px solid black;
+}
+
+div[lang="pl"] p {
+    background-color: gray;
+}
+
+#childs ul li:first-child {
+    font-size: 40px;
+}
+
+/*last child sobie zrób z background color yellow*/
+
+#only-child span:only-child {
+    color: red;
+}
+
+div:empty {
+    height: 300px;
+    width: 300px;
+    background-color:red;
+}
+
+/*atrybuty*/
+#atrybuty input[title~="cokolwiek"] {
+        border: 1px solid green;
+}
+
+#atrybuty input[title*="kolwiek"] {
+    border: 1px solid red;
+}
+
+#atrybuty input[title^="jak"] {
+    border: 1px solid black;
+}
+#atrybuty input[title$="wiek"] {
+    border: 1px solid pink;
+}
